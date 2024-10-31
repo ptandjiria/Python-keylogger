@@ -12,6 +12,7 @@ modifier_keys = {
     Key.ctrl_l: False,
     Key.ctrl_r: False,
     Key.shift: False,
+    Key.shift_r: False,
     Key.alt: False
 }
 
@@ -21,23 +22,31 @@ def on_press(key):
     if key == Key.esc:
         return False
 
+    # Check if key is a modifier and update its state
     if key in modifier_keys:
         modifier_keys[key] = True
-    elif any(modifier_keys.values()):
-        active_modifiers = [str(k) for k, v in modifier_keys.items() if v]
-        found_modifier = active_modifiers[0] if active_modifiers else ""
-        print(f"Combination pressed: {found_modifier} + {key}")
-        logging.info(str(found_modifier) + ", " + str(key))
-        reset_modifiers()
     else:
-        print(f"Single key pressed: {key}")
-        logging.info(str(key))
+        # Identify active modifiers
+        active_modifiers = [str(k) for k, v in modifier_keys.items() if v]
+        
+        if active_modifiers:
+            # If there are multiple modifiers, log them with the pressed key
+            combination = " + ".join(active_modifiers) + f" + {key}"
+            print(f"Combination pressed: {combination}")
+            logging.info(combination)
+        else:
+            # Single key (non-modifier) press
+            print(f"Single key pressed: {key}")
+            logging.info(str(key))
+
+        # Reset modifiers after each key press
+        reset_modifiers()
 
 def reset_modifiers():
     for key in modifier_keys:
         modifier_keys[key] = False
 
-# Listen for keyboard events and call on_keypress whenever a key is stepped
+# Listen for keyboard events and call on_press whenever a key is pressed
 with Listener(on_press=on_press) as listener:
     # Keep the program running until it is stopped
     listener.join()
