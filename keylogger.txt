@@ -1,30 +1,29 @@
-2024-10-31 19:23:47,152: Key.ctrl_l + Key.shift + A
-2024-10-31 19:23:57,961: Key.alt_l
-2024-10-31 19:23:57,971: Key.delete
-2024-10-31 19:23:58,799: Key.alt_l
-2024-10-31 19:23:58,799: Key.delete
-2024-10-31 19:23:59,402: Key.alt_l
-2024-10-31 19:23:59,410: Key.delete
-2024-10-31 19:23:59,901: Key.ctrl_l + Key.alt_l
-2024-10-31 19:23:59,952: Key.ctrl_l + Key.delete
-2024-10-31 19:24:04,122: Key.ctrl_l + Key.alt_l
-2024-10-31 19:24:04,132: Key.ctrl_l + Key.delete
-2024-10-31 19:24:04,829: Key.delete
-2024-10-31 19:24:04,849: Key.ctrl_l + Key.alt_l
-2024-10-31 19:24:06,192: Key.alt_l
-2024-10-31 19:24:06,199: Key.ctrl_l + Key.delete
-2024-10-31 19:24:09,329: Key.ctrl_l + Key.shift + Key.delete
-2024-10-31 19:24:10,749: Key.ctrl_l + Key.shift + Key.delete
-2024-10-31 19:24:11,739: Key.ctrl_l + Key.shift + Key.delete
-2024-10-31 19:24:13,219: Key.ctrl_l + Key.alt_l
-2024-10-31 19:24:13,239: Key.ctrl_l + Key.delete
-2024-10-31 19:24:27,222: Key.ctrl_l + 'z'
-2024-10-31 19:24:28,029: Key.ctrl_l + Key.shift + Z
-2024-10-31 19:24:28,769: 'z'
-2024-10-31 19:24:29,819: Key.ctrl_l + Key.shift + Z
-2024-10-31 19:24:30,739: Key.ctrl_l + Key.shift + Z
-2024-10-31 19:24:34,979: Key.ctrl_l + Key.shift + Key.delete
-2024-10-31 19:24:43,549: Key.ctrl_l + Key.alt_l
-2024-10-31 19:24:43,571: Key.ctrl_l + Key.delete
-2024-10-31 19:24:48,229: Key.ctrl_l + Key.alt_l
-2024-10-31 19:24:48,282: Key.ctrl_l + Key.delete
+Key.ctrl_l + Key.shift + Key.delete
+Key.shift + H
+Key.shift + I
+Key.shift + I
+Key.shift + I
+Key.shift + I
+Key.shift + I
+Key.shift + !
+Key.shift + !
+Key.shift + !
+Key.space
+Key.shift + I
+Key.space
+a
+m
+Key.space
+Key.shift + P
+h
+o
+e
+b
+e
+Key.backspace
+Key.backspace
+Key.backspace
+o
+o
+o
+Key.shift + !
