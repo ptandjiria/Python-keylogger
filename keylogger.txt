@@ -1,18 +1,26 @@
-Key.ctrl_l + Key.shift + Key.delete
+k
+r
+s
+d
+l
+k
+f
 Key.shift + H
-Key.shift + I
-Key.shift + I
-Key.shift + I
-Key.shift + I
-Key.shift + I
-Key.shift + !
-Key.shift + !
-Key.shift + !
+e
+l
+l
+o
 Key.space
-Key.shift + I
+m
+y
 Key.space
+n
 a
 m
+e
+Key.space
+i
+s
 Key.space
 Key.shift + P
 h
@@ -20,10 +28,6 @@ o
 e
 b
 e
-Key.backspace
-Key.backspace
-Key.backspace
-o
-o
-o
+Key.shift + !
+Key.shift + !
 Key.shift + !

