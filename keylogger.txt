@@ -1,17 +1,12 @@
-k
-r
-s
-d
-l
-k
-f
+Key.ctrl_l + Key.shift + Key.delete
 Key.shift + H
-e
-l
-l
-o
+Key.shift + I
+Key.shift + !
+Key.shift + !
+Key.shift + !
+Key.shift + !
 Key.space
-m
+Key.shift + M
 y
 Key.space
 n
@@ -28,6 +23,6 @@ o
 e
 b
 e
-Key.shift + !
-Key.shift + !
-Key.shift + !
+Key.space
+Key.shift + :
+Key.shift + )

